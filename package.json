@@ -1,0 +1,27 @@
+{
+  "name": "week4-harl",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/fac19/week4-harl.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/fac19/week4-harl/issues"
+  },
+  "homepage": "https://github.com/fac19/week4-harl#readme",
+  "dependencies": {},
+  "devDependencies": {
+    "nodemon": "^2.0.2",
+    "supertest": "^4.0.2",
+    "tap-spec": "^5.0.0",
+    "tape": "^4.13.2"
+  }
+}

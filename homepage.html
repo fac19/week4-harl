@@ -3,9 +3,30 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Home</title>
+  <link rel="stylesheet" type="text/css" href="styles.css">
+  <title>Harlspace - a place to harl together.</title>
 </head>
 <body>
-  
+
+  <h1>Harlspace</h1>
+
+  <nav class="nav">
+    <a href="/newpost.html">Add a new post</a>
+  </nav>
+
+  <main class="main">
+    <ul class="main__ul" id="postsList">
+
+    </ul>
+  </main>
 </body>
+<template id="template">
+  <article class="article">
+    <h1 class="article__title"></h1>
+    <p class="article__body"></p>
+    <p class="article__author"></p>
+    <button class="article__button-delete">Delete</button>
+  </article>
+</template>
+<script src="/scripts/homepage.js"></script>
 </html>

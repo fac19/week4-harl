@@ -3,9 +3,27 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" type="text/css" href="styles.css">
   <title>New Post</title>
+  
 </head>
 <body>
+  <body>
+      <header class="title">Harlspace</header>
+  
+      <form class="form">
+        <label for="username" class="form__username--label">Username</label>
+        <input id="username" class="form__username--input" name="username" type="text" placeholder="Your Name">
+        <label for="postTitle" class="form__post-title--label">Title</label>
+        <input id="postTitle" name="post_title" type="text" class="form__post-title--input" placeholder="Title of your Blog">
+         
+        <textarea id="blog_message" class="form__blog-message"></textarea>
+        <div>
+        <button id="submit" class="form__button--submit">Submit</button>
+        <button id="cancel" class="form__button--cancel">Go back</button>
+        </div>
+      </form>
+    
   
 </body>
 </html>

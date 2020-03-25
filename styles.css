@@ -3,3 +3,9 @@
   margin: 0;
   padding: 0;
 }
+
+/* Styling for newpost.html (form) */
+.form {
+  display: flex;
+  flex-direction: column;
+}

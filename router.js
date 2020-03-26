@@ -11,7 +11,7 @@ const publicHandler = require("./handlers/public");
 
 function router(request, response) {
   const url = request.url;
-  if (url === "/") {
+  if (url === "/getposts") {
     // homeHandler(request, response);
   } else if (url.includes("public")) {
     publicHandler(request, response);

@@ -32,7 +32,3 @@ function addPostHandler(request, response) {
 }
 
 module.exports = addPostHandler;
-
-// author, title and body
-
-// url username=john&post_title=hello&blog_message=world

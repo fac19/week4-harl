@@ -1,4 +1,4 @@
-const { counter, posts } = require("../model");
+let { posts } = require("../model");
 
 function getPostsHandler(req,res){
     let headers = {"content-type": "application/json"}

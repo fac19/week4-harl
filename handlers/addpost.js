@@ -18,12 +18,13 @@ function addPostHandler(request, response) {
     increment()
     const id = getCount();
     const newPost = {
-      id: id,
-      author: username,
-      title: postTitle,
-      body: blogMessage
+    
+        author: username,
+        title: postTitle,
+        body: blogMessage
+  
     };
-    posts.push(newPost)
+    posts[id]=newPost
     console.log(posts)
     response.writeHead(302, { location: "/" }); // redirect to homepage with newpost added
     response.end();

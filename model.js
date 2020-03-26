@@ -1,5 +1,5 @@
  let counter = 0;
- let posts = []
+ let posts = {}
 function increment() {
   counter++
 }

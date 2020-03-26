@@ -18,7 +18,7 @@ function addPostHandler(request, response) {
     increment()
     const id = getCount();
     const newPost = {
-    
+
         author: username,
         title: postTitle,
         body: blogMessage

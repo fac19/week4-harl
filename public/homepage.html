@@ -4,29 +4,58 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" type="text/css" href="/public/styles.css">
+  <link href="https://fonts.googleapis.com/css?family=VT323&display=swap" rel="stylesheet">
   <title>Harlspace - a place to harl together.</title>
 </head>
 <body>
+  <div class="container">
 
-  <h1>Harlspace</h1>
+    <header class="title">Harlspace</header>
 
-  <nav class="nav">
-    <a href="/newpost.html">Add a new post</a>
-  </nav>
+    <p class="tagline">A place where vikings connect</p>
+    <nav class="nav">
+      <a href="/public/newpost.html">Add a new post</a>
+    </nav>
 
-  <main class="main">
-    <ul class="main__ul" id="postsList">
+    <main class="main">
+      <ul class="main__ul" id="postsList">
 
-    </ul>
-  </main>
+      </ul>
+    </main>
+  </div>
 </body>
 <template id="template">
   <article class="article">
     <h1 class="article__title"></h1>
-    <p class="article__body"></p>
     <p class="article__author"></p>
+    <p class="article__body"></p>
     <button class="article__button-delete">Delete</button>
   </article>
 </template>
-<script src="/public/homepage.js"></script>
+<!-- <script src="/public/homepage.js"> uncomment this before committing!-->
+<script>
+
+// for testing - delete later! 
+  const template = document.getElementById("template")
+  const postsList = document.getElementById("postsList")
+
+  let data = {
+    1: {author:"Roger", title:"Let's style this", body:"Here is some stuff to style. Mary had a little lamb, it's fleece was white as snow"},
+    2: {author:"Ako", title:"Wow this is great!", body:"Your styling is amazing guys, well done! Such professional work!"},
+    3: {author:"Lizzy", title:"Better than Twitter", body:"There's a new site in town for vikings"},
+  };
+
+  Object.keys(data).forEach( key => {
+      let post = data[key];
+      const newBlog = template.content.cloneNode(true);
+      let title = newBlog.querySelector(".article__title");
+      let body = newBlog.querySelector(".article__body");
+      let author = newBlog.querySelector(".article__author");
+      title.textContent = post.title;
+      body.textContent = post.body;
+      author.textContent = post.author;
+      postsList.appendChild(newBlog)
+  });
+
+</script>
 </html>

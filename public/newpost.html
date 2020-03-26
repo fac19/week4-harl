@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" type="text/css" href="styles.css">
+  <link rel="stylesheet" type="text/css" href="public/styles.css">
   <link href="https://fonts.googleapis.com/css?family=VT323&display=swap" rel="stylesheet">
   <title>New Post</title>
   
@@ -14,7 +14,7 @@
   
       <p class="tagline">A place where vikings connect</p>
 
-      <form class="form">
+      <form class="form" action="/newpost" method="post">
 
         <label for="username" class="form__username--label">Username</label>
         <input id="username" class="form__username--input" name="username" type="text" placeholder="Enter a name">
@@ -27,7 +27,7 @@
         <textarea id="blog_message" class="form__blog-message"></textarea>
 
         <div>
-          <button id="submit" class="form__button--submit">Submit</button>
+          <button id="submit" class="form__button--submit" type="submit">Submit</button>
         </div>
     </form>
     <a href="/" class="link-back">Go back</button>

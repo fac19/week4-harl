@@ -19,7 +19,6 @@ function publicHandler(request,response){
             response.end("<h1>404: File not found</h1>");
         } else {
             let headers = {"content-type": types[extension] };
-            console.log("extension:", extension);
             response.writeHead(200, headers);
             response.end(file);
         }

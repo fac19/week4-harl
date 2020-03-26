@@ -1,8 +1,9 @@
 const fs = require("fs")
 const path = require("path")
-function homeHandler(req, res) {
+
+function newPostHandler(req, res) {
   
-  const filePath = path.join(__dirname, "..", "public", "homepage.html")
+  const filePath = path.join(__dirname, "..", "public", "newpost.html")
   fs.readFile(filePath, (err, file) => {
     if(err) {
       console.error(err)
@@ -14,4 +15,4 @@ function homeHandler(req, res) {
   })
 }
 
-module.exports = homeHandler
+module.exports = newPostHandler

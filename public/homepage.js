@@ -3,19 +3,21 @@ const postsList = document.getElementById("postsList")
 fetch("/getposts")
   .then(res => {
     if(!res.ok) throw new Error("Bad response from Server")
+    return res;
   })
-  .then(res => res.json)
+  .then(res => res.json())
   .then(data => { 
-    postList.innerHTML = "";
-    data.foreach( post => {
-      const newBlog = template.content.cloneNode(true)
-      let title = newBlog.querySelect("article__title")
-      let body = newBlog.querySelect("article__body")
-      let author = newBlog.querySelect("article__author")
+    postsList.innerHTML = "";
+    Object.keys(data).forEach( key => {
+      const post = data[key];
+      const newBlog = template.content.cloneNode(true);
+      let title = newBlog.querySelector(".article__title");
+      let body = newBlog.querySelector(".article__body");
+      let author = newBlog.querySelector(".article__author");
       title.textContent = post.title;
       body.textContent = post.body;
       author.textContent = post.author;
-      postsList.appendChild(newBlog)
+      postsList.appendChild(newBlog);
     });
   })
   .catch(err => console.error(err))

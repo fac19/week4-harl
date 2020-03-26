@@ -1,4 +1,4 @@
-const { counter, posts } = require("./model.js");
+const { counter, posts } = require("../model");
 
 function addPostHandler(request, response) {
   let body = "";

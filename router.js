@@ -1,5 +1,6 @@
 // Serves all the static files
 const publicHandler = require("./handlers/public");
+const getPostsHandler = require("./handlers/getposts");
 
 // Serves homepage.html
 // const homeHandler = require("./handlers/home");
@@ -13,7 +14,7 @@ const addPostHandler = require("./handlers/addpost");
 function router(request, response) {
   const url = request.url;
   if (url === "/getposts") {
-    // homeHandler(request, response);
+    getPostsHandler(request, response);
   } else if (url.includes("public")) {
     publicHandler(request, response);
   } else if (method === "POST" && url === "/newpost") { // double check URL

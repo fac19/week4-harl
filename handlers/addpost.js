@@ -1,4 +1,4 @@
-const { counter, posts } = require("../model");
+let { getCount, increment, posts } = require("../model");
 
 function addPostHandler(request, response) {
   let body = "";
@@ -12,20 +12,21 @@ function addPostHandler(request, response) {
     const data = new URLSearchParams(body);
     const username = data.get("username");
     const postTitle = data.get("post_title");
-    const blogMessage= data.get("blog_message");
-    response.writeHead(302, { location: "/homepage" } ); // redirect to homepage with newpost added (there's a particular )
-
+    const blogMessage = data.get("blog_message");
+    
     // pushing form data into model object
-        // counter = counter++; // test to see if counter is incrementing
-        // const id = counter;
-        // const posts = {
-        //   id: id,
-        //   author: username,
-        //   title: postTitle,
-        //   body: blogMessage
-        // };
-
-    response.end("/homepage.html"); 
+    increment()
+    const id = getCount();
+    const newPost = {
+      id: id,
+      author: username,
+      title: postTitle,
+      body: blogMessage
+    };
+    posts.push(newPost)
+    console.log(posts)
+    response.writeHead(302, { location: "/" }); // redirect to homepage with newpost added
+    response.end();
   });
 }
 

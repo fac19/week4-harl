@@ -10,11 +10,13 @@ const newPostHandler = require("./handlers/newPost")
 // Handler for newpost form submission
 const addPostHandler = require("./handlers/addpost");
 
+const deletePostHandler = require("./handlers/deletepost");
+
 function router(request, response) {
   const url = request.url;
   const method =request.method
  
-  if(url === "/") {
+  if(url === "/" && method !== "DELETE") {
     homeHandler(request, response)
   } else if (url === "/getposts") {
     getPostsHandler(request, response);
@@ -22,8 +24,9 @@ function router(request, response) {
     publicHandler(request, response);
   } else if (url === "/newpost" && method === "GET") {
     newPostHandler(request, response)
-  } 
-  else if (method === "POST" && url === "/newpost") { // double check URL
+  } else if (url === "/" && method === "DELETE") {
+    deletePostHandler(request, response);
+  } else if (method === "POST" && url === "/newpost") { // double check URL
     addPostHandler(request, response);
   } else {
     // missingHandler(request, response);

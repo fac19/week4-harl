@@ -10,27 +10,27 @@
 </head>
 <body>
   <div class="container">
-      <header class="title">Harlspace</header>
+    <header class="title"><img src="https://i.imgur.com/jWWqan5.png" alt="Harlspace"></header>
   
       <p class="tagline">A place where vikings connect</p>
 
       <form class="form" action="/newpost" method="post">
 
         <label for="username" class="form__username--label">Username</label>
-        <input id="username" class="form__username--input" name="username" type="text" placeholder="Enter a name">
+        <input id="username" class="form__username--input" name="username" type="text" placeholder="Enter a name" required>
 
         <label for="postTitle" class="form__post-title--label">Title</label>
-        <input id="postTitle" name="post_title" type="text" class="form__post-title--input" placeholder="Enter a title for your post">
+        <input id="postTitle" name="post_title" type="text" class="form__post-title--input" placeholder="Enter a title for your post" required>
 
         
         <label for="blog_message" class="form__post-blog_message--label">Your message</label>
-        <textarea id="blog_message" class="form__blog-message" name="blog_message"></textarea>
+        <textarea id="blog_message" class="form__blog-message" name="blog_message" required></textarea>
 
         <div>
           <button id="submit" class="form__button--submit" type="submit">Submit</button>
         </div>
     </form>
-    <a href="/" class="link-back">Go back</button>
+    <a href="/" class="link-back">Go back</a>
     </div>
   
 </body>

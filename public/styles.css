@@ -10,7 +10,6 @@
   --background-colour:  #dbe2ef;
 }
 
-
 /* Styling for homepage */
 
 .title {
@@ -20,12 +19,16 @@
   color: var(--primary-colour);
 }
 
+.title img {
+  width: 70%;
+}
+
 .tagline {
   font-family: monospace;
   margin-bottom: 1rem;
 }
 
-a {
+.nav__add-new-post {
   text-decoration: none;
   margin: 0.25em;
   margin-top: 1em;
@@ -93,10 +96,14 @@ body{
   flex-direction: column;
 }
 
-.link-back{
+.link-back {
   display: inline-block;
+  text-decoration: none;
+  padding: 0.3rem;
+  color: black;
   margin-top: 1em;
   margin-bottom: 1em;
+  border: solid var(--secondary-colour)
 }
 
 .form input{
@@ -105,4 +112,15 @@ body{
 
 .form__button--submit{
   margin-top: 1em;
+  background-color: var(--secondary-colour);
+  color: white;
+  padding: 0.5rem;
+  border: none;
+  font-family: monospace;
+}
+
+@media only screen and (min-width: 2000px) {
+  .tagline {
+    font-size: 2rem;
+  }
 }
